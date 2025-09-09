@@ -24,4 +24,21 @@ int main() {
     printf("Depois de remover o último:\n");
     imprimirLista(lista);
 
+     // Exercício 3
+    printf("\n--- Exercicio 3 ---\n");
+    int rmBusca = 102;
+    int indice = buscarAlunoPorRM(lista, rmBusca);
+    if (indice != -1) {
+        printf("Aluno com RM %d encontrado no índice %d:\n", rmBusca, indice);
+        imprimirAluno(lista.dados[indice]);
+    } else {
+        printf("Aluno com RM %d não encontrado.\n", rmBusca);
+    }
+
+    // Exercício 4
+    printf("\n--- Exercicio 4 ---\n");
+    float media = calcularMedia(lista);
+    printf("Média das notas da lista: %.2f\n", media);
+
+    return 0;
 }
